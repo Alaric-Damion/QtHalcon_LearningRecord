@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{776867ba-0005-44ac-8539-38684ee3d5f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\Src">
+      <UniqueIdentifier>{33f7f390-c452-4089-a747-c53ddc408453}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CustomViewTest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomViewTestDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Interface\CustomViewInterface.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\corapi.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SapClassBasic.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SunADO.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SunBase.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SunCanvas.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SunControlExt.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SunCustomView.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SunDatabaseFun.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SunDefine.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SunDIBapi.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SunDIBProc.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SunDirectDraw.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SunItemList.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SunMemory.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SunMyBmp.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SunPublic.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SunSocketBase.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SunStr.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SunTimer.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SunVersion.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\TreePackInterface.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CustomViewTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomViewTestDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Include\Src\SunAdo.cpp">
+      <Filter>Include\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Include\Src\SunCanvas.cpp">
+      <Filter>Include\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Include\Src\SunControlExt.cpp">
+      <Filter>Include\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Include\Src\SunCustomView.cpp">
+      <Filter>Include\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Include\Src\SunDatabaseFun.cpp">
+      <Filter>Include\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Include\Src\SunDIBapi.cpp">
+      <Filter>Include\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Include\Src\SunDIBProc.cpp">
+      <Filter>Include\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Include\Src\SunDirectDraw.cpp">
+      <Filter>Include\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Include\Src\SunItemList.cpp">
+      <Filter>Include\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Include\Src\SunMemory.cpp">
+      <Filter>Include\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Include\Src\SunMyBmp.cpp">
+      <Filter>Include\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Include\Src\SunPublic.cpp">
+      <Filter>Include\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Include\Src\SunSocketBase.cpp">
+      <Filter>Include\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Include\Src\SunStr.cpp">
+      <Filter>Include\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Include\Src\SunTimer.cpp">
+      <Filter>Include\Src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CustomViewTest.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\CustomViewTest.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\CustomViewTest.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
