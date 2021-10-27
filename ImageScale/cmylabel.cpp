@@ -85,16 +85,27 @@ void CMyLabel::wheelEvent(QWheelEvent *ev)
 //鼠标按下事件
 void CMyLabel::mousePressEvent(QMouseEvent *ev)
 {
-    HTuple mouseRow, mouseCol, Button;
+    HTuple mouseRow, mouseCol, Button,hv_Error;
     SetCheck("~give_error");
-    GetMposition(m_hHalconID, &mouseRow, &mouseCol, &Button);
+    try
+     {
+       hv_Error = 2;
+       GetMposition(m_hHalconID, &mouseRow, &mouseCol, &Button);
+     }
+     catch(HException e)
+     {
+       hv_Error = (int)e.ErrorCode();
+       if (hv_Error < 0)
+         throw e;
+     }
+
     SetCheck("give_error");
 
     //当光标不在Halcon窗口内时返回，否则会报错
-//    if (ret != H_MSG_TRUE)
-//    {
-//        return;
-//    }
+    if (hv_Error != 2)
+    {
+        return;
+    }
 
     //鼠标按下时的行列坐标
     m_tMouseDownRow = mouseRow;

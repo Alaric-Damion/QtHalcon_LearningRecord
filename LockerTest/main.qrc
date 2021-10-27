@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/Collapse.png</file>
+        <file>image/Expand.png</file>
+    </qresource>
+</RCC>
