@@ -27,6 +27,10 @@ Halcon 12.0/17.0
 
 ![Draw_Item](https://images.gitee.com/uploads/images/2021/0817/221520_bf81174f_4968621.png "4.Draw_Item.PNG")
 
+5.AutoRepeat_Test
+
+![AutoRepeat.gif](https://upload-images.jianshu.io/upload_images/18790832-135e5bf6f524146f.gif?imageMogr2/auto-orient/strip)
+
 #### 文件夹说明
 
 1.  snap
