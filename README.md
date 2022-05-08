@@ -29,7 +29,7 @@ Halcon 12.0/17.0
 
 * 5.AutoFacus
 
-![AutoFacus](https://upload-images.jianshu.io/upload_images/18790832-64c20650f0a3072a.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![AutoFacus](snap/5.AutoFacus.PNG)
 
 * 6.LockerTest
 
