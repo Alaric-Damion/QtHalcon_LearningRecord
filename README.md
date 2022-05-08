@@ -33,11 +33,11 @@ Halcon 12.0/17.0
 
 * 6.LockerTest
 
-![LockerTest.PNG](https://upload-images.jianshu.io/upload_images/18790832-65da8a59866afabf.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![LockerTest](snap/6.LockerTest.PNG)
 
 * 7.CustomToolBox
 
-![CustomToolBox.PNG](https://upload-images.jianshu.io/upload_images/18790832-aeb397e212ac264e.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![CustomToolBox](snap/7.CustomToolBox.PNG)
 
 * 8.AutoRepeat_Test
 
