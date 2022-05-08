@@ -11,3 +11,4 @@ SUBDIRS += AutoRepeat_Test                  #Qt实现QPushButton长按触发事�
 SUBDIRS += SwitchButton                     #Qt实现开关控件效果
 SUBDIRS += CameraDllTest                    #Balser工业相机采图及参数设置
 SUBDIRS += QtCameraDemo                     #Qt实现USB多摄像头视频、抓图及参数设置
+SUBDIRS += VideoTracking                    #Qt+OpenCV实现USB摄像头监测移动物体
