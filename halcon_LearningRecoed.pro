@@ -12,3 +12,5 @@ SUBDIRS += SwitchButton                     #Qt实现开关控件效果
 SUBDIRS += CameraDllTest                    #Balser工业相机采图及参数设置
 SUBDIRS += QtCameraDemo                     #Qt实现USB多摄像头视频、抓图及参数设置
 SUBDIRS += VideoTracking                    #Qt+OpenCV实现USB摄像头监测移动物体
+SUBDIRS += OneCamera_JHcamDemo              #JH相机单相机采图Demo
+SUBDIRS += TwoCamera_JHcamDemo              #JH相机单相机采图Demo

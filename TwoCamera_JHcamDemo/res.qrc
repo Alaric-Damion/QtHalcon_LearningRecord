@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file alias="filesave">res/filesave.png</file>
+        <file alias="view-refresh">res/view-refresh.png</file>
+        <file alias="zoomin">res/zoomin.png</file>
+        <file alias="zoomout">res/zoomout.png</file>
+        <file alias="save">res/save.png</file>
+        <file alias="play">res/play.png</file>
+        <file alias="pause">res/pause.png</file>
+        <file alias="app">res/app.ico</file>
+        <file alias="setting">res/setting.png</file>
+        <file alias="window">res/window.png</file>
+    </qresource>
+    <qresource prefix="/image">
+        <file alias="logo">res/logo.png</file>
+    </qresource>
+</RCC>
