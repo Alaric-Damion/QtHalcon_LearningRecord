@@ -12,50 +12,62 @@ Halcon 12.0/17.0
 #### 子项目介绍
 
 * 1.ARM_FontSet
+**功能：**实现Halcon界面设定的文字字体和大小设置。
 
 ![ARM_FontSet](https://images.gitee.com/uploads/images/2021/0817/221328_6315a907_4968621.png "1.ARM_FontSet.PNG")
 
 * 2.CustomView
+**功能：**实现Halcon界面设定的文字字体和大小设置。
 
 ![CustomView](https://images.gitee.com/uploads/images/2021/0817/221415_1799756c_4968621.png "2.CustomView.PNG")
 
 * 3.ImageScale
+**功能：**实现Halcon界面设定的文字字体和大小设置。
 
 ![ImageScale](https://images.gitee.com/uploads/images/2021/0817/221456_5b998351_4968621.png "3.ImageScale.PNG")
 
 * 4.Draw_Item
+**功能：**实现Halcon界面设定的文字字体和大小设置。
 
 ![Draw_Item](https://images.gitee.com/uploads/images/2021/0817/221520_bf81174f_4968621.png "4.Draw_Item.PNG")
 
 * 5.AutoFacus
+**功能：**实现Halcon界面设定的文字字体和大小设置。
 
 ![AutoFacus](https://upload-images.jianshu.io/upload_images/18790832-64c20650f0a3072a.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 * 6.LockerTest
+**功能：**实现Halcon界面设定的文字字体和大小设置。
 
 ![LockerTest.PNG](https://upload-images.jianshu.io/upload_images/18790832-65da8a59866afabf.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 * 7.CustomToolBox
+**功能：**实现Halcon界面设定的文字字体和大小设置。
 
 ![CustomToolBox.PNG](https://upload-images.jianshu.io/upload_images/18790832-aeb397e212ac264e.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 * 8.AutoRepeat_Test
+**功能：**实现Halcon界面设定的文字字体和大小设置。
 
 ![AutoRepeat.gif](https://upload-images.jianshu.io/upload_images/18790832-135e5bf6f524146f.gif?imageMogr2/auto-orient/strip)
 
 * 9.SwitchButton
+**功能：**实现Halcon界面设定的文字字体和大小设置。
 
 ![控件效果.gif](https://upload-images.jianshu.io/upload_images/18790832-d3ac7d11a0b10b86.gif?imageMogr2/auto-orient/strip)
 
 * 10.Balser_GigeDemo
+**功能：**实现Halcon界面设定的文字字体和大小设置。
 
 ![Balser相机采图.PNG](https://upload-images.jianshu.io/upload_images/18790832-7d541df5c0207b2b.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 * 11.QtCameraDemo
+**功能：**实现Halcon界面设定的文字字体和大小设置。
 
 ![多相机采图和参数设置.gif](https://upload-images.jianshu.io/upload_images/18790832-a556398d14b44dca.gif?imageMogr2/auto-orient/strip)
 
 * 12.VideoTracking
+**功能：**实现Halcon界面设定的文字字体和大小设置。
 
 ![VideoTracking.PNG](https://upload-images.jianshu.io/upload_images/18790832-1ad551d7fe47dfa7.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 #### 文件夹说明
