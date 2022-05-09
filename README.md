@@ -17,59 +17,59 @@ Halcon 12.0/17.0
 ![ARM_FontSet](https://images.gitee.com/uploads/images/2021/0817/221328_6315a907_4968621.png "1.ARM_FontSet.PNG")
 
 * 2.CustomView
-**功能：**实现Halcon界面设定的文字字体和大小设置。
+**功能：**实现超大像素图像读取/显示功能。
 
 ![CustomView](https://images.gitee.com/uploads/images/2021/0817/221415_1799756c_4968621.png "2.CustomView.PNG")
 
 * 3.ImageScale
-**功能：**实现Halcon界面设定的文字字体和大小设置。
+**功能：**实现图像缩放平移功能。
 
 ![ImageScale](https://images.gitee.com/uploads/images/2021/0817/221456_5b998351_4968621.png "3.ImageScale.PNG")
 
 * 4.Draw_Item
-**功能：**实现Halcon界面设定的文字字体和大小设置。
+**功能：**实现QGraphicsView的自定义Item组件。
 
 ![Draw_Item](https://images.gitee.com/uploads/images/2021/0817/221520_bf81174f_4968621.png "4.Draw_Item.PNG")
 
 * 5.AutoFacus
-**功能：**实现Halcon界面设定的文字字体和大小设置。
+**功能：**实现图像自动对焦评价系数参考。
 
 ![AutoFacus](snap/5.AutoFacus.PNG)
 
 * 6.LockerTest
-**功能：**实现Halcon界面设定的文字字体和大小设置。
+**功能：**实现Qt抽屉展开折叠显示功能。
 
 ![LockerTest](snap/6.LockerTest.PNG)
 
 * 7.CustomToolBox
-**功能：**实现Halcon界面设定的文字字体和大小设置。
+**功能：**实现Qt控件操作使用功能。
 
 ![CustomToolBox](snap/7.CustomToolBox.PNG)
 
 * 8.AutoRepeat_Test
-**功能：**实现Halcon界面设定的文字字体和大小设置。
+**功能：**Qt实现QPushButton长按触发事件。
 
-![AutoRepeat.gif](https://upload-images.jianshu.io/upload_images/18790832-135e5bf6f524146f.gif?imageMogr2/auto-orient/strip)
+![AutoRepeat](snap/8.AutoRepeat.gif)
 
 * 9.SwitchButton
-**功能：**实现Halcon界面设定的文字字体和大小设置。
+**功能：**Qt实现开关控件效果。
 
-![控件效果.gif](https://upload-images.jianshu.io/upload_images/18790832-d3ac7d11a0b10b86.gif?imageMogr2/auto-orient/strip)
+![控件效果](snap/9.SwitchButton.PNG)
 
 * 10.Balser_GigeDemo
-**功能：**实现Halcon界面设定的文字字体和大小设置。
+**功能：**Balser工业相机采图及参数设置。
 
-![Balser相机采图.PNG](https://upload-images.jianshu.io/upload_images/18790832-7d541df5c0207b2b.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Balser相机采图](snap/10.Balser相机采图.PNG)
 
 * 11.QtCameraDemo
-**功能：**实现Halcon界面设定的文字字体和大小设置。
+**功能：**Qt实现USB多摄像头视频、抓图及参数设置。
 
-![多相机采图和参数设置.gif](https://upload-images.jianshu.io/upload_images/18790832-a556398d14b44dca.gif?imageMogr2/auto-orient/strip)
+![多相机采图和参数设置](snap/11.Qt多相机采图和参数设置.gif)
 
 * 12.VideoTracking
-**功能：**实现Halcon界面设定的文字字体和大小设置。
+**功能：**Qt+OpenCV实现USB摄像头监测移动物体。
 
-![VideoTracking.PNG](https://upload-images.jianshu.io/upload_images/18790832-1ad551d7fe47dfa7.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![VideoTracking](snap/12.VideoTracking.PNG)
 #### 文件夹说明
 
 1.  snap
