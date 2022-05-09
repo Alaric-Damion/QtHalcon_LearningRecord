@@ -34,17 +34,17 @@ Halcon 12.0/17.0
 * 5.AutoFacus
 **功能：**实现Halcon界面设定的文字字体和大小设置。
 
-![AutoFacus](https://upload-images.jianshu.io/upload_images/18790832-64c20650f0a3072a.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![AutoFacus](snap/5.AutoFacus.PNG)
 
 * 6.LockerTest
 **功能：**实现Halcon界面设定的文字字体和大小设置。
 
-![LockerTest.PNG](https://upload-images.jianshu.io/upload_images/18790832-65da8a59866afabf.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![LockerTest](snap/6.LockerTest.PNG)
 
 * 7.CustomToolBox
 **功能：**实现Halcon界面设定的文字字体和大小设置。
 
-![CustomToolBox.PNG](https://upload-images.jianshu.io/upload_images/18790832-aeb397e212ac264e.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![CustomToolBox](snap/7.CustomToolBox.PNG)
 
 * 8.AutoRepeat_Test
 **功能：**实现Halcon界面设定的文字字体和大小设置。
