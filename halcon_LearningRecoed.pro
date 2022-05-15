@@ -14,3 +14,4 @@ SUBDIRS += QtCameraDemo                     #Qt实现USB多摄像头视频、抓
 SUBDIRS += VideoTracking                    #Qt+OpenCV实现USB摄像头监测移动物体
 SUBDIRS += OneCamera_JHcamDemo              #JH相机单相机采图Demo
 SUBDIRS += TwoCamera_JHcamDemo              #JH相机单相机采图Demo
+SUBDIRS += GrayTo3channel                   #8位单通道转24位三通道图像

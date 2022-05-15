@@ -59,17 +59,23 @@ Halcon 12.0/17.0
 * 10.Balser_GigeDemo
 **功能：**Balser工业相机采图及参数设置。
 
-![Balser相机采图](snap/10.Balser相机采图.PNG)
+![Balser相机采图](snap/10.Balser_GigeDemo.PNG)
 
 * 11.QtCameraDemo
 **功能：**Qt实现USB多摄像头视频、抓图及参数设置。
 
-![多相机采图和参数设置](snap/11.Qt多相机采图和参数设置.gif)
+![多相机采图和参数设置](snap/11.QtCameraDemo.gif)
 
 * 12.VideoTracking
 **功能：**Qt+OpenCV实现USB摄像头监测移动物体。
 
 ![VideoTracking](snap/12.VideoTracking.PNG)
+
+* 13.GrayTo3channel
+**功能：**Qt实现8位灰度图叠加通道转换成24位三通道图像。
+
+![GrayTo3channel](snap/13.GrayTo3channel.gif)
+
 #### 文件夹说明
 
 1.  snap
