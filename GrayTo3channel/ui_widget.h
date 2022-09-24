@@ -35,6 +35,7 @@ public:
     QGroupBox *groupBox_2;
     QGridLayout *gridLayout_2;
     QLabel *lbl_RGBImg;
+    QHBoxLayout *horizontalLayout_2;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
     QPushButton *btn_LoadPic;
@@ -46,13 +47,14 @@ public:
     QLineEdit *edt_ImgSavePath;
     QPushButton *btn_SaveImgPath;
     QPushButton *btn_trans;
+    QPushButton *btn_BatchTrans;
     QPushButton *btn_close;
 
     void setupUi(QWidget *Widget)
     {
         if (Widget->objectName().isEmpty())
             Widget->setObjectName(QStringLiteral("Widget"));
-        Widget->resize(740, 384);
+        Widget->resize(821, 384);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -99,6 +101,12 @@ public:
 
 
         gridLayout_3->addWidget(groupBox_2, 0, 1, 1, 1);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setSpacing(6);
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+
+        gridLayout_3->addLayout(horizontalLayout_2, 1, 0, 1, 1);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(6);
@@ -152,13 +160,18 @@ public:
 
         horizontalLayout->addWidget(btn_trans);
 
+        btn_BatchTrans = new QPushButton(Widget);
+        btn_BatchTrans->setObjectName(QStringLiteral("btn_BatchTrans"));
+
+        horizontalLayout->addWidget(btn_BatchTrans);
+
         btn_close = new QPushButton(Widget);
         btn_close->setObjectName(QStringLiteral("btn_close"));
 
         horizontalLayout->addWidget(btn_close);
 
 
-        gridLayout_3->addLayout(horizontalLayout, 1, 0, 1, 2);
+        gridLayout_3->addLayout(horizontalLayout, 2, 0, 1, 2);
 
 
         retranslateUi(Widget);
@@ -180,6 +193,7 @@ public:
         label->setText(QApplication::translate("Widget", "\344\277\235\345\255\230\350\267\257\345\276\204\357\274\232", Q_NULLPTR));
         btn_SaveImgPath->setText(QApplication::translate("Widget", "\344\277\256\346\224\271\350\267\257\345\276\204", Q_NULLPTR));
         btn_trans->setText(QApplication::translate("Widget", "\350\275\254\346\215\242", Q_NULLPTR));
+        btn_BatchTrans->setText(QApplication::translate("Widget", "\346\211\271\351\207\217\350\275\254\346\215\242", Q_NULLPTR));
         btn_close->setText(QApplication::translate("Widget", "\351\200\200\345\207\272", Q_NULLPTR));
     } // retranslateUi
 

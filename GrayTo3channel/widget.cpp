@@ -146,7 +146,18 @@ Mat Widget::convertTo3Channels(const cv::Mat& binImg)
 
 void Widget::on_btn_close_clicked()
 {
-    close();
+//    delete ui->horizontalLayout;
+    QPushButton *button = new QPushButton(this);
+    ui->horizontalLayout->removeWidget(ui->btn_LoadPic);
+
+    ui->horizontalLayout_2->addWidget(button,0);
+    ui->horizontalLayout_2->addWidget(ui->btn_LoadPic,1);
+
+
+
+
+
+ //   close();
 }
 
 void Widget::on_btn_OpenFile_clicked()
@@ -267,4 +278,70 @@ void Widget::on_btn_SaveImgPath_clicked()
     QStringList filter;
     QFileInfoList fileInfoList = dir->entryInfoList(filter);
     saveFile_Num  = fileInfoList.count()-2;
+}
+
+void Widget::on_btn_BatchTrans_clicked()
+{
+    if(ui->edt_ImgSavePath->text().isEmpty())
+    {
+        QMessageBox::critical(NULL, "critical", "未指定保存文件夹，请设置！");
+        return;
+    }
+    else if(ui->btn_OpenFile->text().isEmpty())
+    {
+        QMessageBox::critical(NULL, "critical", "批量导入文件夹为空，请重新设置！");
+        return;
+    }
+    else
+    {
+        int img_Num = PicNameInfo.count();
+        QProgressDialog progress;
+
+        progress.setWindowFlags(Qt::Dialog | Qt::CustomizeWindowHint | Qt::WindowTitleHint);		//不显示进度条上的“最小化”“最大化”“关闭”
+        progress.setWindowTitle("图像转换");	//窗口标题
+        progress.setModal(true);
+        progress.setAutoClose(false);		//进度达到最大值时不关闭，默认为true
+        progress.setLabelText("批量图像转换中...");	//显示的文本
+        progress.setRange(0,img_Num);				//设置进度条的极值，默认为[0,100]
+        progress.setCancelButton(NULL);			//不显示取消按钮
+        progress.show();						//进度条显示
+
+        //防止界面卡住，可以使用在每次设置数值时加上QApplication::processEvent()
+
+
+        for(int i=0;i<img_Num;i++)
+        {
+            QString picPathShow = file_path + "/" + PicNameInfo.value(i);
+            qDebug()<<"picPathShow"<<picPathShow;
+            QImage inputImg;
+            inputImg.load(picPathShow);
+            QImage ShowImg = inputImg.scaled(ui->lbl_GrayImg->size(),Qt::KeepAspectRatio);
+            ui->lbl_GrayImg->setPixmap(QPixmap::fromImage(ShowImg));
+            ui->lbl_RGBImg->clear();
+
+            Mat curMatImg = QImage2Mat(inputImg);
+            //判断输入图像是不是8位灰度图像
+            if(curMatImg.type() == CV_8UC4)
+            {
+                cvtColor(curMatImg,curMatImg,COLOR_RGBA2RGB);
+                qDebug()<<"width"<<curMatImg.cols<<curMatImg.rows;
+            }
+            else if(curMatImg.type() == CV_8UC1)
+            {
+                curMatImg = convertTo3Channels(curMatImg);
+            }
+            else
+            {
+                qDebug()<<"Img is 3 Channels";
+            }
+            QImage QimgTrans = cvMat2QImage(curMatImg);
+            QImage ShowTranImg = QimgTrans.scaled(ui->lbl_RGBImg->size(),Qt::KeepAspectRatio);
+            ui->lbl_RGBImg->setPixmap(QPixmap::fromImage(ShowTranImg));
+            QString SaveFilePath = ui->edt_ImgSavePath->text() + "/" + PicNameInfo.value(i);
+            QimgTrans.save(SaveFilePath);
+            QCoreApplication::processEvents();
+            progress.setValue(i);
+        }
+        QMessageBox::critical(NULL, "critical", "批量转换完成！");
+    }
 }

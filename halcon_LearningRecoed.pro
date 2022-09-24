@@ -17,3 +17,4 @@ SUBDIRS += TwoCamera_JHcamDemo              #JH相机单相机采图Demo
 SUBDIRS += GrayTo3channel                   #8位单通道转24位三通道图像
 SUBDIRS += Code_Encryption                  #软件授权管理、程序加密
 SUBDIRS += ImgFormatTrans                   #图像格式转换
+SUBDIRS += Dynamic_setStyle                 #动态设置样式属性

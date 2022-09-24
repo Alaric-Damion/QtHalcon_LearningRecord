@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>740</width>
+    <width>821</width>
     <height>384</height>
    </rect>
   </property>
@@ -131,6 +131,13 @@
       <widget class="QPushButton" name="btn_trans">
        <property name="text">
         <string>转换</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_BatchTrans">
+       <property name="text">
+        <string>批量转换</string>
        </property>
       </widget>
      </item>

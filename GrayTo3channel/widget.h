@@ -8,6 +8,8 @@
 #include <QDebug>
 #include <QMessageBox>
 #include "opencv2/opencv.hpp"
+#include <QProgressDialog>
+#include <QApplication>
 
 namespace Ui {
 class Widget;
@@ -34,6 +36,8 @@ private slots:
     void on_btn_LoadPic_clicked();
 
     void on_btn_SaveImgPath_clicked();
+
+    void on_btn_BatchTrans_clicked();
 
 private:
     Ui::Widget *ui;
