@@ -18,3 +18,4 @@ SUBDIRS += GrayTo3channel                   #8位单通道转24位三通道图�
 SUBDIRS += Code_Encryption                  #软件授权管理、程序加密
 SUBDIRS += ImgFormatTrans                   #图像格式转换
 SUBDIRS += Dynamic_setStyle                 #动态设置样式属性
+SUBDIRS += printTest                        #美松打印机测试工具
