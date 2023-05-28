@@ -76,6 +76,26 @@ Halcon 12.0/17.0
 
 ![GrayTo3channel](snap/13.GrayTo3channel.gif)
 
+* 14.Code_Encryption
+**功能：**Qt实现软件使用次数限制。
+
+![Code_Encryption](snap/14.Code_Encryption.gif)
+
+* 15.Dynamic_setStyle
+**功能：**Qt实现控件背景的qss。
+
+![Dynamic_setStyle](snap/15.Dynamic_setStyle.JPG)
+
+* 16.printTest
+**功能：**美松打印机打印测试程序。
+
+![printTest](snap/16.printTest.PNG)
+
+* 17.rtsp_Display
+**功能：**Qt调用VLC-Qt库实现拉流播放。
+
+![rtsp_Display](snap/17.rtsp_Display.PNG)
+
 #### 文件夹说明
 
 1.  snap
