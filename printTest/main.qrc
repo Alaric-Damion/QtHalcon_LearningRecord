@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>image/Printer.bmp</file>
+        <file>image/myIco.ico</file>
     </qresource>
 </RCC>

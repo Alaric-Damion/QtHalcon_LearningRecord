@@ -23,16 +23,24 @@ Widget::~Widget()
 
 void Widget::on_btn_initPrint_clicked()
 {
-    QString txt_Com = ui->edt_Port->text();
-    char* ch;
-    QByteArray ba = txt_Com.toLatin1(); // must
-    ch=ba.data();
-//    char text_port[40] = "USB001";
-    QString txt_rate = ui->edt_Rate->text();
-    int rate = txt_rate.toInt();
-    qDebug()<<"rate"<<ch<<rate;
-    SetPrintport(ch,rate);
-    //    SetPrintportFlowCtrl(1);
+    QString txt_Com = ui->cmb_Port->currentText();
+    if(txt_Com == "USBAuto")
+    {
+        SetUsbportauto();
+    }
+    else
+    {
+        SetComportauto();
+        SetPrintportFlowCtrl(1);
+    }
+//    char* ch;
+//    QByteArray ba = txt_Com.toLatin1(); // must
+//    ch=ba.data();
+//    QString txt_rate = ui->edt_Rate->text();
+//    int rate = txt_rate.toInt();
+//    qDebug()<<"rate"<<ch<<rate;
+//    int ret = SetPrintport(ch,rate);
+//     qDebug()<<"result"<<ret<<rate;
 
     int m_iInit = SetInit();
 
@@ -50,13 +58,15 @@ void Widget::on_btn_initPrint_clicked()
 
 void Widget::on_btn_print_clicked()
 {    
+    int leftOffset = ui->spb_LeftOffset->value();
+    int topOffset = ui->spb_TopOffset->value();
     qDebug()<<"打印开始";
     SetBold(1);
     QByteArray string;
     //第一行预留10dot（1dot=0.125mm）
-    PrintFeedDot(10);
-    PrintQrcode("1123469-033",3,6,1);
-    SetLeftmargin(160);
+    PrintFeedDot(topOffset);
+    PrintQrcode("1123469-033",2,6,1);
+    SetLeftmargin(leftOffset+140);
 
     QString ProductIDStr = "单号：1123469-033";
     string = ProductIDStr.toLocal8Bit();
@@ -83,7 +93,7 @@ void Widget::on_btn_print_clicked()
     //清空设置
     SetClean();
     //设置距离左边距20dot
-    SetLeftmargin(20);
+    SetLeftmargin(leftOffset);
     QString ProfileColorStr = "A法式香槟色B氟碳灰色";
     string = ProfileColorStr.toLocal8Bit();
     char *c_ProfileColorStr = string.data();
@@ -110,7 +120,7 @@ void Widget::init_printDLL()
     ui->textEdit->append("A法式香槟色B氟碳灰色");
     ui->textEdit->append("海南三亚旗舰店-陆涛");
 
-    QString DLLpath = "./printDll/lib/Msprintsdk.x64.dll";
+    QString DLLpath = "./Msprintsdk.x64.dll";
 
     m_hInstancePrint =LoadLibrary(DLLpath.toStdWString().c_str());
     if(m_hInstancePrint!=NULL)
@@ -137,6 +147,8 @@ void Widget::init_printDLL()
         SetBold =   (int (*)(int iBold))GetProcAddress(m_hInstancePrint, "SetBold");
         GetStatus = (int(*)(void))GetProcAddress(m_hInstancePrint, "GetStatus");
         GetStatusspecial = (int(*)(void))GetProcAddress(m_hInstancePrint, "GetStatusspecial");
+        SetComportauto = (int(*)(void))GetProcAddress(m_hInstancePrint, "SetComportauto");
+        SetUsbportauto = (int(*)(void))GetProcAddress(m_hInstancePrint, "SetUsbportauto");
     }
     else
     {
