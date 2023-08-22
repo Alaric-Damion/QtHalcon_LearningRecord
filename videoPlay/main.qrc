@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/24gf-backward.png</file>
+        <file>img/24gf-forward.png</file>
+        <file>img/24gf-pause.png</file>
+        <file>img/24gf-play.png</file>
+        <file>img/24gf-stop.png</file>
+        <file>img/redo.png</file>
+        <file>img/video_icon.png</file>
+        <file>img/fold.png</file>
+    </qresource>
+</RCC>

@@ -7,6 +7,7 @@ Widget::Widget(QWidget *parent)
     , ui(new Ui::Widget)
 {
     ui->setupUi(this);
+    this->setWindowTitle("VLC拉流测试");
     ui->btn_snap->setEnabled(false);
     inst = new VlcInstance(VlcCommon::args(), this);
     vlcPlayer = new VlcMediaPlayer(inst);

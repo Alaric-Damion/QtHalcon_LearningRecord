@@ -96,6 +96,10 @@ Halcon 12.0/17.0
 
 ![rtsp_Display](snap/17.rtsp_Display.PNG)
 
+* 18.videoPlay
+**功能：**基于OPenCV的视频播放器。
+
+![videoPlay](snap/18.videoPlay.PNG)
 #### 文件夹说明
 
 1.  snap
