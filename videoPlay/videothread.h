@@ -15,30 +15,44 @@ class videothread : public QThread
 public:
     videothread(const char* filename);
     void run();
+    //释放视频采集对象
     void releaseCap();
-    int getVideoAllFramecount();//获取视频总帧数
-    void setCurrentFrame(int value);//设置当前进度条
+    //获取视频总帧数
+    int getVideoAllFramecount();
+    //设置当前进度条
+    void setCurrentFrame(int value);
 
     bool getStop() const;
-    void setStop(bool value);//设置视频结束标识
+    //设置视频结束标识
+    void setStop(bool value);
     bool getIsrun() const;
     void setIsrun(bool value);
-
-    void pauseThread();//暂停
-    void resumeThread();//继续
-    void stopThread();//停止
+    //暂停
+    void pauseThread();
+    //继续
+    void resumeThread();
+    //停止
+    void stopThread();
 
 signals:
-    void sendFrame(int currentFrame,Mat frame);//当前帧和 帧数
+    //发送当前帧和 帧数
+    void sendFrame(int currentFrame,Mat frame);
 private:
-    VideoCapture cap;//视频对象
+    //视频对象
+    VideoCapture cap;
     Mat frame;
-    int currentFramecount;//视频当前帧数
-    int allFramecount;//总帧数
-    int fps;//视频帧率
-    int videoWriterFrame;//录制视频帧
-    bool stop;//线程结束标识位
-    bool isrun;//视频暂停标识位
+    //视频当前帧数
+    int currentFramecount;
+    //总帧数
+    int allFramecount;
+    //视频帧率
+    int fps;
+    //录制视频帧
+    int videoWriterFrame;
+    //线程结束标识位
+    bool stop;
+    //视频暂停标识位
+    bool isrun;
 
 };
 

@@ -9,11 +9,12 @@ Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
 {
-    this->receiveCurrentFramecount=0;
-    this->isend=false;
+
     ui->setupUi(this);
-    this->setWindowTitle("视频播放器");
-    this->setWindowIcon(QIcon(":/img/video_icon.png"));
+    setWindowTitle("视频播放器");
+    setWindowIcon(QIcon(":/img/video_icon.png"));
+    receiveCurrentFramecount=0;
+    isend=false;
     connect(ui->horizontalSlider,SIGNAL(costomSliderClicked()),this,SLOT(sliderClickedSlot()));//点击进度条信号槽
     ui->horizontalSlider->setSingleStep(1);//设置单步长为1
     qRegisterMetaType<Mat>("Mat");
@@ -23,7 +24,6 @@ Widget::Widget(QWidget *parent) :
     ui->btn_replay->setEnabled(false);
     ui->btn_stopPlay->setEnabled(false);
     ui->horizontalSlider->setEnabled(false);
-
 }
 
 Widget::~Widget()
@@ -33,13 +33,13 @@ Widget::~Widget()
 
 void Widget::receiveFrame(int currentFrame, Mat frame)
 {
-    this->receiveCurrentFramecount=currentFrame;
-    this->img1 = QImage(frame.data,frame.cols,frame.rows,QImage::Format_RGB888);
-    this->img1 = this->img1.scaled(ui->label->width(),ui->label->height());
-    ui->label->setPixmap(QPixmap::fromImage(this->img1));
+    receiveCurrentFramecount=currentFrame;
+    img1 = QImage(frame.data,frame.cols,frame.rows,QImage::Format_RGB888);
+    img1 = img1.scaled(ui->label->width(),ui->label->height());
+    ui->label->setPixmap(QPixmap::fromImage(img1));
 
-    ui->horizontalSlider->setValue(this->receiveCurrentFramecount);//设置当前进度条取值
-    ui->label_2->setText(QString::number(this->receiveCurrentFramecount));//设置当前帧数
+    ui->horizontalSlider->setValue(receiveCurrentFramecount);//设置当前进度条取值
+    ui->label_2->setText(QString::number(receiveCurrentFramecount));//设置当前帧数
     update();
 }
 
@@ -155,12 +155,12 @@ void Widget::on_btn_stopPlay_clicked()
     qDebug()<<"结束播放，线程关闭";
     if(!pthread->isRunning())//线程不在运行
     {
-        if(this->isend!=true)//此时线程结束 已释放，就不再释放
+        if(isend!=true)//此时线程结束 已释放，就不再释放
         {
             //断开连接
             disconnect(pthread,SIGNAL(sendFrame(int,Mat)),this,SLOT(receiveFrame(int,Mat)));//接收每一帧Mat
             delete pthread;
-            this->pthread = nullptr;
+            pthread = nullptr;
         }
     }
     ui->btn_startPlay->setIcon(QIcon(":/img/24gf-play.png"));
@@ -184,12 +184,12 @@ void Widget::on_btn_replay_clicked()
     qDebug()<<"重新播放";
     if(!pthread->isRunning())//线程不在运行
     {
-        if(this->isend!=true)//此时线程结束 已释放，就不再释放
+        if(isend!=true)//此时线程结束 已释放，就不再释放
         {
             //断开连接
             disconnect(pthread,SIGNAL(sendFrame(int,Mat)),this,SLOT(receiveFrame(int,Mat)));//接收每一帧Mat
             delete pthread;
-            this->pthread = nullptr;
+            pthread = nullptr;
         }
 
         //创建新线程
@@ -200,7 +200,7 @@ void Widget::on_btn_replay_clicked()
         pthread->setIsrun(true);//视频开始
         connect(pthread,SIGNAL(sendFrame(int,Mat)),this,SLOT(receiveFrame(int,Mat)));//接收每一帧Mat
 
-        this->isend=false;//表明此时线程还未结束
+        isend=false;//表明此时线程还未结束
         ui->btn_startPlay->setIcon(QIcon(":/img/24gf-pause.png"));
         ui->btn_backward->setEnabled(true);
         ui->btn_forward->setEnabled(true);
