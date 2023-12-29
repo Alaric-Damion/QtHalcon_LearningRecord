@@ -37,18 +37,21 @@ int (*PrintQRcode500II)(int iwidth,const char* strData);
 int (*Print1Dbar)(int iWidth,int iHeight,int iHrisize,int iHriseat,int iCodetype,const char* strData);
 int (*PrintPdf417)(int iDotwidth,int iDotheight,int iDatarows,int iDatacolumns,const char* strData);
 int (*PrintDiskbmpfile)(const char* strPath);
+int (*PrintDiskbmpfileZD)(const char* strPath);
+int (*PrintDiskimgfile)(const char* strPath);
 int (*PrintNvmbp)(int iNvindex,int iMode);
 int (*PrintMarkposition)();
 int (*PrintMarkpositionprint)();
 int (*PrintMarkpositioncut)();
 int (*PrintMarkcutpaper)(int iMode);
 int (*PrintTransmit)(const char* bCmd,int iLength);
-int (*PrintChangeRow)();
+int (*PrintChargeRow)();
 int (*PrintRemainQR)();
 int (*PrintFeedDot)(int Lnumber);
 int (*GetProductinformation)(int iFstype,char *bFiddata,int iFidlen);
 
 int (*GetTransmit)(const char* bCmd,int iLength,char* bRecv,int iRelen);
+int (*GetTransmitExt)(const char* bCmd,int iLength);
 int (*GetStatus)();
 int (*GetStatusspecial)();
 int (*GetSDKinformation)(char *bInfodata);
@@ -70,6 +73,14 @@ int (*PrintPDF_CCCB_B)(const char* strPath);
 int (*GetStatus_TS)();
 int (*SetPrintConn)(int iConnWay,const char *strName,const char *strValue);
 int (*PrintDataMatrix)(const char* strData, int iSize) ;
+int (*PrintDiskpdffile)(const char* strPath,int iWidth,int iHeight);
+
+int (*SetPagemode)(int iMode,int Xrange,int Yrange);
+int (*SetPagestartposition)(int Xdot,int Ydot);
+int (*SetPagedirection)(int iDirection);
+int (*PrintPagedata)();
+typedef int (*PFCALLBACK)(int param1, char* param2,int param3);
+typedef void (*PCallBackData)(PFCALLBACK);
 #endif
 
 

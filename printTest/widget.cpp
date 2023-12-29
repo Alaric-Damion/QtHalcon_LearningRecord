@@ -28,20 +28,17 @@ void Widget::on_btn_initPrint_clicked()
     {
         SetUsbportauto();
     }
-    else
+    else if(txt_Com == "ComAuto")
     {
         SetComportauto();
         SetPrintportFlowCtrl(1);
     }
-//    char* ch;
-//    QByteArray ba = txt_Com.toLatin1(); // must
-//    ch=ba.data();
-//    QString txt_rate = ui->edt_Rate->text();
-//    int rate = txt_rate.toInt();
-//    qDebug()<<"rate"<<ch<<rate;
-//    int ret = SetPrintport(ch,rate);
-//     qDebug()<<"result"<<ret<<rate;
-
+    else
+    {
+        char text_port[40] = "USB001";
+        int rate = 115200;
+        SetPrintport(text_port,rate);
+    }
     int m_iInit = SetInit();
 
     if(m_iInit ==0)
@@ -57,18 +54,22 @@ void Widget::on_btn_initPrint_clicked()
 }
 
 void Widget::on_btn_print_clicked()
-{    
+{
     int leftOffset = ui->spb_LeftOffset->value();
     int topOffset = ui->spb_TopOffset->value();
     qDebug()<<"打印开始";
-    SetBold(1);
+//    SetBold(1);
     QByteArray string;
     //第一行预留10dot（1dot=0.125mm）
-    PrintFeedDot(topOffset);
-    PrintQrcode("1123469-033",2,6,1);
-    SetLeftmargin(leftOffset+140);
+//    int freeRet = PrintFeedDot(topOffset);
+//    qDebug()<<"freeRet status"<<freeRet<<endl;
+//    PrintQrcode("1123469-033",6,5,1);
+//    SetLeftmargin(leftOffset+120);
+    SetLeftmargin(leftOffset);
+    SetSizechar(1,1,1,1);
+    SetSizechinese(1,1,1,1);
 
-    QString ProductIDStr = "单号：1123469-033";
+    QString ProductIDStr = "1123469-033777";
     string = ProductIDStr.toLocal8Bit();
     char *c_ProductIDStr = string.data();
     qDebug()<<"c_ProductIDStr"<<c_ProductIDStr;
@@ -89,11 +90,19 @@ void Widget::on_btn_print_clicked()
     string = ProfileNameStr.toLocal8Bit();
     char *c_ProfileNameStr = string.data();
     PrintString(c_ProfileNameStr,0);
-    int r = PrintRemainQR();
+//    int r = PrintRemainQR();
     //清空设置
     SetClean();
     //设置距离左边距20dot
+
     SetLeftmargin(leftOffset);
+    QString BarStr = "1123469-0337";
+    string = BarStr.toLocal8Bit();
+    char *c_BarStr = string.data();
+
+    int ret = Print1Dbar(6,40,0,0,10,"1DBadddr");
+    qDebug()<<"bar status"<<ret<<endl;
+//    PrintFeedline(2);
     QString ProfileColorStr = "A法式香槟色B氟碳灰色";
     string = ProfileColorStr.toLocal8Bit();
     char *c_ProfileColorStr = string.data();
@@ -139,7 +148,7 @@ void Widget::init_printDLL()
         SetAlignment =   (int (*)(int iAlignment))GetProcAddress(m_hInstancePrint, "SetAlignment");
         PrintFeedDot =   (int (*)(int Lnumber))GetProcAddress(m_hInstancePrint, "PrintFeedDot");
         PrintFeedline =   (int (*)(int iLine))GetProcAddress(m_hInstancePrint, "PrintFeedline");
-        PrintChangeRow = (int(*)(void))GetProcAddress(m_hInstancePrint, "PrintChangeRow");
+//        PrintChangeRow = (int(*)(void))GetProcAddress(m_hInstancePrint, "PrintChangeRow");
         GetStatus = (int(*)(void))GetProcAddress(m_hInstancePrint, "GetStatus");
         SetReadZKmode =   (int (*)(int mode))GetProcAddress(m_hInstancePrint, "SetReadZKmode");
         SetSizechinese =   (int (*)(int iHeight,int iWidth,int iUnderline,int iChinesetype))GetProcAddress(m_hInstancePrint, "SetSizechinese");
@@ -149,6 +158,12 @@ void Widget::init_printDLL()
         GetStatusspecial = (int(*)(void))GetProcAddress(m_hInstancePrint, "GetStatusspecial");
         SetComportauto = (int(*)(void))GetProcAddress(m_hInstancePrint, "SetComportauto");
         SetUsbportauto = (int(*)(void))GetProcAddress(m_hInstancePrint, "SetUsbportauto");
+
+//        SetPagemode = (int (*)(int status,int iHeight,int iWidth))GetProcAddress(m_hInstancePrint, "SetPagemode");
+//        Print1Dbar = (int (*)(int iWidth,int iHeight,int iHrisize,
+//                              int iHriseat,int iCodetype,const char* strData))GetProcAddress(m_hInstancePrint, "SetPagemode");
+        Print1Dbar = (int(*)(int iWidth,int iHeight,
+                              int iHrisize,int iHriseat,int iCodetype,const char* strData))GetProcAddress(m_hInstancePrint, "Print1Dbar");
     }
     else
     {
@@ -348,3 +363,50 @@ void Widget::on_pushButton_clicked()
     }
 
 }
+
+void Widget::on_btn_PagePrint_clicked()
+{
+//    SetClean();   //清理缓存，清除之前设置的参数
+
+//    SetPagemode(1, 400, 320);//进入页模式，并设置页面大小，50mm宽，高25mm
+
+
+//    SetPagestartposition(80, 16);//设置页模式数据打印起始位置坐标
+
+//    m_sbData = new StringBuilder("0001194940");
+//    PrintString(m_sbData, 0);
+
+//    SetPagestartposition(320, 16);
+//    m_sbData = new StringBuilder("贾晓乐");
+//    PrintString(m_sbData, 0);
+
+//    SetPagestartposition(8, 40);//设置页模式数据打印起始位置坐标
+////    StringBuilder bar_data = new StringBuilder("a20181226");
+//    QString bar_data = "a20181226";
+//    QByteArray string;
+//    string = bar_data.toLocal8Bit();
+//    char *c_bar_data = string.data();
+//    Print1Dbar(2, 100, 1, 0, 10, c_bar_data);
+
+//    SetPagestartposition(340, 64);//设置页模式数据打印起始位置坐标
+//    m_sbData = new StringBuilder("男");
+//    PrintString(m_sbData, 0);
+
+//    SetPagestartposition(340, 100);//设置页模式数据打印起始位置坐标
+//    m_sbData = new StringBuilder("25");
+//    PrintString(m_sbData, 0);
+
+//    SetPagestartposition(56, 140);//设置页模式数据打印起始位置坐标
+//    m_sbData = new StringBuilder("220210001934   血清");
+//    PrintString(m_sbData, 0);
+
+
+//    SetPagestartposition(8, 170);//设置页模式数据打印起始位置坐标
+//    m_sbData = new StringBuilder("血脂四项*葡萄糖（Glu）测定");
+//    PrintString(m_sbData, 0);
+
+//    PrintPagedata();//
+//    SetPagemode(0, 400, 200);//退出页模式
+//    PrintMarkpositioncut();//黑标(不干胶)模式下检测黑标(不干胶缝隙)并进纸到切纸位置
+}
+

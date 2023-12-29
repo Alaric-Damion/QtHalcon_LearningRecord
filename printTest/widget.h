@@ -33,6 +33,8 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_btn_PagePrint_clicked();
+
 private:
     Ui::Widget *ui;
     void init_printDLL();

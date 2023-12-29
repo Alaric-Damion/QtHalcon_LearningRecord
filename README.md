@@ -100,6 +100,11 @@ Halcon 12.0/17.0
 **功能：**基于OPenCV的视频播放器。
 
 ![videoPlay](snap/18.videoPlay.PNG)
+
+* 19.transTest
+**功能：**Qt的中英文动态翻译。
+
+![transTest](snap/19.transTest.gif)
 #### 文件夹说明
 
 1.  snap

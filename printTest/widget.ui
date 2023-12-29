@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>494</width>
+    <width>500</width>
     <height>480</height>
    </rect>
   </property>
@@ -33,6 +33,11 @@
        <item>
         <property name="text">
          <string>ComAuto</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>USB001</string>
         </property>
        </item>
       </widget>
@@ -175,6 +180,13 @@
      </item>
      <item>
       <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>刷新状态</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_PagePrint">
        <property name="text">
         <string>页打印</string>
        </property>
