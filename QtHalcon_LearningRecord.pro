@@ -22,3 +22,4 @@ SUBDIRS += printTest                        #美松打印机测试工具
 SUBDIRS += rtsp_Display                     #VLC-Qt拉流播放器
 SUBDIRS += videoPlay                        #基于OpenCV的视频播放器
 SUBDIRS += transTest                        #Qt的中英文动态翻译
+SUBDIRS += SingleApplationTest              #Qt程序单例运行测试
