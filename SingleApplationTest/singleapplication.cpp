@@ -88,9 +88,11 @@ void SingleApplication::ActivateWindow()
 {
     if(w)
     {
-        w->raise();
-        //        w->activateWindow();
+
+
         w->showNormal();
+        w->activateWindow();
+        w->raise();
 
         //        这个可以显示原窗口的大小（即最小化前的大小）（windowsAPI唤醒窗口）
         //        HWND hwnd = reinterpret_cast<HWND>(m->winId());

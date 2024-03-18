@@ -105,13 +105,23 @@ Halcon 12.0/17.0
 **功能：**Qt的中英文动态翻译。
 
 ![transTest](snap/19.transTest.gif)
+
+* 20.SingleApplationTest
+  **功能：**Qt程序单例化测试。
+
+![SingleApplationTest](snap/20.SingleApplationTest.gif)
 #### 文件夹说明
 
+20.SingleApplationTest
 1.  snap
 此文件夹为各子工程界面截图
 2.  File_Info
 此文件夹存放工程所需文件，如图像/txt/ini
 3.  bin
 此文件夹存放工程创建的exe文件
+4.  Halcon_StudyProject
+此文件存放Halcon学习过程中的一些实际例子
+5.  OpenCV_LearningProject
+此文件存放OpenCV学习过程中的一些例子
 
 

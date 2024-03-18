@@ -1,5 +1,5 @@
 ﻿#include "widget.h"
-//#include "singleapplication.h"
+#include "singleapplication.h"
 #include <QApplication>
 #include <QLockFile>
 #include <QMessageBox>
@@ -21,20 +21,20 @@ bool CheckSoftExist()
 int main(int argc, char *argv[])
 {
     // 方法一 本地socket 使用SingleApplication 代替原来的QApplication类
-//    SingleApplication a(argc, argv);
-//    if(!a.isRunning()){
-//        Widget w;
-//        a.w = &w;
-//        w.show();
-//        return a.exec();
-//    }
-
-    // 方法二 文件锁方法
-    QApplication a(argc, argv);
-    if(CheckSoftExist() == true)
-    {
+    SingleApplication a(argc, argv);
+    if(!a.isRunning()){
         Widget w;
+        a.w = &w;
         w.show();
         return a.exec();
     }
+
+    // 方法二 文件锁方法
+//    QApplication a(argc, argv);
+//    if(CheckSoftExist() == true)
+//    {
+//        Widget w;
+//        w.show();
+//        return a.exec();
+//    }
 }
