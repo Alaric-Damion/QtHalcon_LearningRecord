@@ -23,3 +23,4 @@ SUBDIRS += rtsp_Display                     #VLC-Qt拉流播放器
 SUBDIRS += videoPlay                        #基于OpenCV的视频播放器
 SUBDIRS += transTest                        #Qt的中英文动态翻译
 SUBDIRS += SingleApplationTest              #Qt程序单例运行测试
+SUBDIRS += PixelPos_MouseFollow             #Qt实现实时获取图像坐标和像素值

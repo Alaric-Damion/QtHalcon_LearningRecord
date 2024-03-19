@@ -1,7 +1,6 @@
 ﻿#ifndef ONMOUSE_H
 #define ONMOUSE_H
 
-#pragma once
 #include<iostream>
 #include<opencv2/opencv.hpp>
 
