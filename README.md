@@ -110,9 +110,13 @@ Halcon 12.0/17.0
   **功能：**Qt程序单例化测试。
 
 ![SingleApplationTest](snap/20.SingleApplationTest.gif)
+
+* 21.PixelPos_MouseFollow
+  **功能：**Qt实现实时获取图像坐标和像素值。
+
+![PixelPos_MouseFollow](snap/21.PixelPos_MouseFollow.gif)
 #### 文件夹说明
 
-20.SingleApplationTest
 1.  snap
 此文件夹为各子工程界面截图
 2.  File_Info
@@ -123,5 +127,4 @@ Halcon 12.0/17.0
 此文件存放Halcon学习过程中的一些实际例子
 5.  OpenCV_LearningProject
 此文件存放OpenCV学习过程中的一些例子
-
 
