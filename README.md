@@ -121,6 +121,11 @@ Halcon 12.0/17.0
 
 ![GrayTrans](snap/OpenCV_LearningProject/2.GrayTrans.gif)
 
+* 3.Gray_Histogram
+  **功能：**OpenCV实现灰度直方图均衡化、直方图规定化。
+
+![Gray_Histogram](snap/OpenCV_LearningProject/3.Gray_Histogram.gif)
+
 #### 文件夹说明
 
 1.  snap
