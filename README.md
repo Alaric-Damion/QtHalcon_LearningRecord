@@ -110,11 +110,17 @@ Halcon 12.0/17.0
   **功能：**Qt程序单例化测试。
 
 ![SingleApplationTest](snap/20.SingleApplationTest.gif)
-
-* 21.PixelPos_MouseFollow
+#### OpenCV学习例子
+* 1.PixelPos_MouseFollow
   **功能：**Qt实现实时获取图像坐标和像素值。
 
-![PixelPos_MouseFollow](snap/21.PixelPos_MouseFollow.gif)
+![PixelPos_MouseFollow](snap/OpenCV_LearningProject/1.PixelPos_MouseFollow.gif)
+
+* 2.GrayTrans
+  **功能：**OpenCV实现灰度图像翻转、对数变换、伽马变换。
+
+![GrayTrans](snap/OpenCV_LearningProject/2.GrayTrans.gif)
+
 #### 文件夹说明
 
 1.  snap
