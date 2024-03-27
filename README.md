@@ -126,6 +126,11 @@ Halcon 12.0/17.0
 
 ![Gray_Histogram](snap/OpenCV_LearningProject/3.Gray_Histogram.gif)
 
+* 4.MedianFilter_OpenCV
+  **功能：**OpenCV实现中值滤波。
+
+![MedianFilter_OpenCV](snap/OpenCV_LearningProject/4.MedianFilter_OpenCV.gif)
+
 #### 文件夹说明
 
 1.  snap
