@@ -131,6 +131,11 @@ Halcon 12.0/17.0
 
 ![MedianFilter_OpenCV](snap/OpenCV_LearningProject/4.MedianFilter_OpenCV.gif)
 
+* 5.MeanFilter_OpenCV
+  **功能：**OpenCV实现均值滤波。
+
+![MeanFilter_OpenCV](snap/OpenCV_LearningProject/5.MeanFilter_OpenCV.gif)
+
 #### 文件夹说明
 
 1.  snap
