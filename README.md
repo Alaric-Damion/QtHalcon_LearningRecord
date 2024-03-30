@@ -136,6 +136,11 @@ Halcon 12.0/17.0
 
 ![MeanFilter_OpenCV](snap/OpenCV_LearningProject/5.MeanFilter_OpenCV.gif)
 
+* 6.GaussFilter_OpenCV
+  **功能：**OpenCV实现高斯滤波。
+
+![GaussFilter_OpenCV](snap/OpenCV_LearningProject/6.GaussFilter_OpenCV.gif)
+
 #### 文件夹说明
 
 1.  snap

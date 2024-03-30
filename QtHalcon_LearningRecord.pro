@@ -28,3 +28,4 @@ SUBDIRS += OpenCV_LearningProject/GrayTrans                                     
 SUBDIRS += OpenCV_LearningProject/Gray_Histogram                                #OpenCV实现灰度直方图均衡化、规定化
 SUBDIRS += OpenCV_LearningProject/MedianFilter_OpenCV                           #OpenCV实现中值滤波
 SUBDIRS += OpenCV_LearningProject/MeanFilter_OpenCV                             #OpenCV实现均值滤波
+SUBDIRS += OpenCV_LearningProject/GaussFilter_OpenCV                            #OpenCV实现高斯滤波
