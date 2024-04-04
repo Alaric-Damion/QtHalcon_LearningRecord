@@ -141,6 +141,11 @@ Halcon 12.0/17.0
 
 ![GaussFilter_OpenCV](snap/OpenCV_LearningProject/6.GaussFilter_OpenCV.gif)
 
+* 7.Laplacian_OpenCV
+  **功能：**OpenCV实现空间滤波之拉普拉斯锐化。
+
+![Laplacian_OpenCV](snap/OpenCV_LearningProject/7.Laplacian_OpenCV.gif)
+
 #### 文件夹说明
 
 1.  snap
