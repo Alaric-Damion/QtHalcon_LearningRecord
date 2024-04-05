@@ -30,3 +30,4 @@ SUBDIRS += OpenCV_LearningProject/MedianFilter_OpenCV                           
 SUBDIRS += OpenCV_LearningProject/MeanFilter_OpenCV                             #OpenCV实现均值滤波
 SUBDIRS += OpenCV_LearningProject/GaussFilter_OpenCV                            #OpenCV实现高斯滤波
 SUBDIRS += OpenCV_LearningProject/Laplacian_OpenCV                              #OpenCV实现空间滤波之拉普拉斯锐化
+SUBDIRS += OpenCV_LearningProject/Dft_OpenCV                                    #OpenCV实现频域滤波之傅里叶变换

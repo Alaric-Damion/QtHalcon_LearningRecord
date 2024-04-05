@@ -146,6 +146,11 @@ Halcon 12.0/17.0
 
 ![Laplacian_OpenCV](snap/OpenCV_LearningProject/7.Laplacian_OpenCV.gif)
 
+* 8.Dft_OpenCV
+  **功能：**OpenCV实现频域滤波之傅里叶变换。
+
+![Dft_OpenCV](snap/OpenCV_LearningProject/8.Dft_OpenCV.gif)
+
 #### 文件夹说明
 
 1.  snap
