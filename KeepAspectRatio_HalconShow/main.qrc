@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/adaptiveScreen.png</file>
+        <file>image/clearFiles.png</file>
+        <file>image/folder.png</file>
+        <file>image/zoom_next.ico</file>
+        <file>image/zoom_pre.ico</file>
+    </qresource>
+</RCC>
