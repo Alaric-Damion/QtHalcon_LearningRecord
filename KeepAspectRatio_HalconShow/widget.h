@@ -4,6 +4,7 @@
 #include <QWidget>
 #include "Halcon.h"
 #include "HalconCpp.h"
+#include <QMap>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
@@ -19,6 +20,9 @@ public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
 
+protected:
+    void resizeEvent(QResizeEvent *ev);
+
 private slots:
     void on_btn_loadMultiPic_clicked();
 
@@ -29,6 +33,8 @@ private slots:
     void on_btn_AdaptiveScreen_clicked();
 
     void on_btn_clearPic_clicked();
+
+    void on_listWidget_doubleClicked(const QModelIndex &index);
 
 private:
     //listwidget Item尺寸
@@ -43,6 +49,8 @@ private:
     HTuple m_hLabelID;
     //Halcon显示窗口句柄
     HTuple m_hHalconID = NULL;
+    //批量图像路径
+    QMap<int, QString> PicNameInfo;
 
 private:
     Ui::Widget *ui;
@@ -58,9 +66,6 @@ private:
     void LoadHalconImg(QString imgPath);
     //QImage转HObjetc
     HObject QImage2HObject(QImage qimg);
-
-
-
 
 };
 #endif // WIDGET_H
