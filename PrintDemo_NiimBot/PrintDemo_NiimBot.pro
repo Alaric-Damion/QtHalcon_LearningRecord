@@ -32,3 +32,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 DEFINES -= UNICODE
 DEFINES += UMBCS
 QMAKE_CXXFLAGS -= -Zc:strictStrings
+
+INCLUDEPATH += $$PWD/Resources_x86
+DEPENDPATH += $$PWD/Resources_x86

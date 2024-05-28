@@ -1,6 +1,7 @@
 ﻿#pragma execution_character_set("utf-8")
 #include "SwitchButton.h"
 #include <QPainter>
+#include <QPainterPath>
 
 SwitchButton::SwitchButton(QWidget *parent) : QWidget(parent)
 {
