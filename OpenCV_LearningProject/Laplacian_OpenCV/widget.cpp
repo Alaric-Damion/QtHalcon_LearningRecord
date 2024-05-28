@@ -20,7 +20,7 @@ Widget::~Widget()
 
 void Widget::on_btn_loadPic_clicked()
 {
-    Mat Img = imread("lena.png");
+    Mat Img = imread("lena.jpg");
     cvtColor(Img, grayImg, COLOR_BGR2GRAY);
 
     QImage qImg_Gray = cvMat2QImage(grayImg);
